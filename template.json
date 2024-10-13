@@ -1,0 +1,230 @@
+{
+  "Actor": {
+    "types": ["character", "mook", "monster", "party"],
+    "templates": {
+      "attributes": {
+				"attribute": {
+					"strength": {
+						"label": "ATTRIBUTE.STRENGTH",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+					"agility": {
+						"label": "ATTRIBUTE.AGILITY",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+					"wits": {
+						"label": "ATTRIBUTE.WITS",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+					"empathy": {
+						"label": "ATTRIBUTE.EMPATHY",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+          "numenera": {
+						"label": "ATTRIBUTE.NUMENERA",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+					"health": {
+						"label": "ATTRIBUTE.HEALTH",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					},
+					"resolve": {
+						"label": "ATTRIBUTE.RESOLVE",
+						"value": 0,
+						"min": 0,
+						"max": 0
+					}
+				}
+			},
+			"skills": {
+				"skill": {
+					"might": {
+						"label": "SKILL.MIGHT",
+						"value": 0,
+						"min": 0,
+						"attribute": "strength"
+					},
+					"endurance": {
+						"label": "SKILL.ENDURANCE",
+						"value": 0,
+						"min": 0,
+						"attribute": "strength"
+					},
+					"melee-attack": {
+						"label": "SKILL.MELEE_ATTACK",
+						"value": 0,
+						"min": 0,
+						"attribute": "strength"
+					},
+					"stealth": {
+						"label": "SKILL.STEALTH",
+						"value": 0,
+						"min": 0,
+						"attribute": "agility"
+					},
+					"sleight-of-hand": {
+						"label": "SKILL.SLEIGHT_OF_HAND",
+						"value": 0,
+						"min": 0,
+						"attribute": "agility"
+					},
+					"move": {
+						"label": "SKILL.MOVE",
+						"value": 0,
+						"min": 0,
+						"attribute": "agility"
+					},
+          "drive": {
+						"label": "SKILL.DRIVE",
+						"value": 0,
+						"min": 0,
+						"attribute": "agility"
+					},
+					"ranged-attack": {
+						"label": "SKILL.RANGED_ATTACK",
+						"value": 0,
+						"min": 0,
+						"attribute": "agility"
+					},
+					"perception": {
+						"label": "SKILL.PERCEPTION",
+						"value": 0,
+						"min": 0,
+						"attribute": "wits"
+					},
+					"medicine": {
+						"label": "SKILL.MEDICINE",
+						"value": 0,
+						"min": 0,
+						"attribute": "wits"
+					},
+					"survival": {
+						"label": "SKILL.SURVIVAL",
+						"value": 0,
+						"min": 0,
+						"attribute": "wits"
+					},
+					"craft": {
+						"label": "SKILL.CRAFT",
+						"value": 0,
+						"min": 0,
+						"attribute": "wits"
+					},
+					"manipulation": {
+						"label": "SKILL.MANIPULATION",
+						"value": 0,
+						"min": 0,
+						"attribute": "empathy"
+					},
+          "insight": {
+						"label": "SKILL.INSIGHT",
+						"value": 0,
+						"min": 0,
+						"attribute": "empathy"
+					},
+					"performance": {
+						"label": "SKILL.PERFORMANCE",
+						"value": 0,
+						"min": 0,
+						"attribute": "empathy"
+					},
+					"animal-handling": {
+						"label": "SKILL.ANIMAL_HANDLING",
+						"value": 0,
+						"min": 0,
+						"attribute": "empathy"
+					},
+					"control": {
+						"label": "SKILL.CONTROL",
+						"value": 0,
+						"min": 0,
+						"attribute": "numenera"
+					},
+					"knowledge": {
+						"label": "SKILL.KNOWLEDGE",
+						"value": 0,
+						"min": 0,
+						"attribute": "numenera"
+					},
+          "creation": {
+						"label": "SKILL.CREATION",
+						"value": 0,
+						"min": 0,
+						"attribute": "numenera"
+					},
+          "salvaging": {
+						"label": "SKILL.SALVAGING",
+						"value": 0,
+						"min": 0,
+						"attribute": "numenera"
+					}
+				}
+			}
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 10
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 10
+        }
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}
